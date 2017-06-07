@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.copsbehindme.sip.futureReturnCalculator">
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="SIP Calculator"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/principle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="31dp"
+                    android:ems="10"
+                    android:hint="Enter Principle Amount"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/time"
+                    android:layout_marginTop="13dp"
+                    android:ems="10"
+                    android:hint="Enter rate of interest"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/principle"
+                    android:layout_marginTop="13dp"
+                    android:ems="10"
+                    android:hint="Enter no. of yrs"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/sipName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="13dp"
+                    android:hint="Name of SIP"
+                    android:inputType="textPersonName" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/calculate_return_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/rate"
+                        android:layout_marginTop="23dp"
+                        android:background="@drawable/buttonshape"
+                        android:onClick="calculateTotal"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowRadius="5"
+                        android:text="  Calculate Returns  "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/save_sip_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:background="@drawable/buttonshape"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowRadius="5"
+                        android:onClick="saveSIP"
+                        android:text="Save SIP" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/investedValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/calculate_return_button"
+                    android:layout_marginTop="33dp"
+                    android:text="Invested : "
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/totalReturns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/investedValue"
+                    android:layout_marginTop="25dp"
+                    android:text="Total Returns :"
+                    android:textSize="22dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/totalReturns">
+
+                </com.github.mikephil.charting.charts.PieChart>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                </com.github.mikephil.charting.charts.LineChart>
+
+                <Button
+                    android:id="@+id/sip_delete_button"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:background="@drawable/deletebutton"
+                    android:onClick="deleteSIP"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowRadius="5"
+                    android:text="Delete"
+                    android:textColor="#FF2E58"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

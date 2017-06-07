@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.copsbehindme.sip.login_signup">
+
+
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="117dp"
+            android:ems="10"
+            android:hint="username"
+            android:inputType="text"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/tryTextView" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/usernameEditText"
+            android:layout_below="@+id/usernameEditText"
+            android:layout_marginTop="13dp"
+            android:maxLength="4"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowRadius="5"
+            android:onClick="signin"
+            android:text="Login"
+
+            android:layout_marginEnd="36dp"
+            android:layout_below="@+id/passwordEditText"
+            android:layout_toStartOf="@+id/orTextView" />
+
+        <TextView
+            android:id="@+id/orTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/loginButton"
+            android:layout_alignBottom="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:text="OR" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/loginButton"
+            android:layout_marginStart="31dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowRadius="5"
+            android:layout_toEndOf="@+id/orTextView"
+            android:onClick="signup"
+            android:text="Signup" />
+
+        <Button
+            android:id="@+id/tryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="99dp"
+            android:background="@drawable/buttonshape"
+            android:onClick="gotoHome"
+            android:shadowColor="#A8A8A8"
+            android:shadowRadius="5"
+            android:text="  Try Features  "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tryButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:text="* trying doesn't allow you save data" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_above="@+id/passwordEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="62dp"
+            android:contentDescription="logo"
+            app:srcCompat="@drawable/homelogo" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
